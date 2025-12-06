@@ -42,9 +42,10 @@ public class PlayHistory {
                 Hero person2 = exchange.getNextPerson();
 
                 exchange.exchange(person1, person2);
+                // exchange.exchange(null, new Dog("Пёс погнаый", new Jacket(JacketColors.BlUE)));
                 // exchange.exchange(person1, person1);
                 // exchange.exchange(person2, new Hero(NamesHero.ALICE, new Clothe(ClotheColors.BLUE),0.9, true));
-                //exchange.exchange(person2, new Dog("ПЁС ПОГАНЫЙ", new Jacket(JacketColors.BlUE)));
+                // exchange.exchange(person2, new Dog("ПЁС ПОГАНЫЙ", new Jacket(JacketColors.BlUE)));
             }
 
             System.out.println("Обмен завершен");

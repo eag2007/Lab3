@@ -78,14 +78,21 @@ public class Exchange implements BehaviorOfCharacter {
     }
 
     public void exchange(Exchangeable person1, Exchangeable person2) {
-        if (person2 instanceof Hero && person1 instanceof Shorty) {
+        if (person1 == null && person2 == null) {
+            System.out.println("Объектов не существует");
+        } else if (person1 == null) {
+            System.out.println("Объекта 1 не существует");
+        } else if (person2 == null) {
+            System.out.println("Объекта 2 не существует");
+        } else if (person2 instanceof Hero && person1 instanceof Shorty) {
             exchangeShortyHero((Shorty) person1, (Hero) person2);
         } else if (person1 instanceof Hero && person2 instanceof Shorty) {
             exchangeShortyHero((Shorty) person2, (Hero) person1);
         } else if (person1.canExchangeWith(person2) || person2.canExchangeWith(person1)){
             exchangeExchangeable(person1, person2);
         } else {
-            System.out.println(person1.getName() + ", " + person2.getName() + " не умеют обмениваться");
+            System.out.println(person1.getName() + " " + person1.getClass() + ", " + person2.getName() + " "
+                    + person2.getClass() + " не умеют обмениваться они разные по природе");
         }
     }
 
