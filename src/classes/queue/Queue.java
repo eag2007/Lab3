@@ -29,12 +29,10 @@ public class Queue implements BehaviorOfCharacter {
 
     private ArrayList<Shorty> generateQueue(ArrayList<Shorty> list) {
         for (int i = 0; i < this.n; i++) {
-            // Можно генерировать разную одежду для коротышек
             Clothe clothe;
             if (random.nextBoolean()) {
                 clothe = new Manual(ManualColors.getRandomColor());
             } else {
-                // Здесь можно добавить другие типы одежды
                 clothe = new Manual(ManualColors.getRandomColor());
             }
             list.add(new Shorty(NamesShorty.getRandomName(), clothe));
