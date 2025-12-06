@@ -12,7 +12,6 @@ public class Main {
     public static void main(String[] args) {
         PlayHistory history = new PlayHistory();
 
-        // Теперь можно создавать героев с разной одеждой
         Hero dunno = new Hero(NamesHero.DUNNO, null, 0.5, true);
         Hero button = new Hero(NamesHero.BUTTON, null, 0.6, true);
         Hero mottled = new Hero(NamesHero.MOTTLED, null, 0.7, true);
@@ -25,7 +24,6 @@ public class Main {
         Hero nikita = new Hero(NamesHero.NIKITA, null, 1, true);
         Hero evgeniy = new Hero(NamesHero.EVGENIY, new Manual(ManualColors.BLACK), 1, true);
 
-        // Теперь можно добавлять Jacket
         Hero testJacket = new Hero(NamesHero.DUNNO,
                 new Jacket(JacketColors.GREEN),
                 0.5, true);
